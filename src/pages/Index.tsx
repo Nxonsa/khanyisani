@@ -1,6 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
+import { Courses } from "@/components/Courses";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -18,7 +20,9 @@ const Index = () => {
     >
       <Hero />
       <Services />
+      <Courses />
       <Contact />
+      <Footer />
     </motion.div>
   );
 };
