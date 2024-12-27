@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -13,19 +14,28 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/01d04dfc-ae85-445e-a418-a0bf64ea5bc4.png" 
+              alt="Khanyisani Logo" 
+              className="h-24 mx-auto opacity-90"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Khanyisani Firearm and Security Training Academy
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Professional security training and firearm handling courses by industry experts
           </p>
-          <Button
-            size="lg"
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group"
-          >
-            Explore Our Courses
-            <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="#courses">
+            <Button
+              size="lg"
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group"
+            >
+              Explore Our Courses
+              <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>
