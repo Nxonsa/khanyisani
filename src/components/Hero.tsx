@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
+  const scrollToCourses = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const coursesSection = document.getElementById('courses');
+    coursesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-accent">
       <div className="absolute inset-0 bg-[url('/lovable-uploads/2fe542ce-4bdd-4e82-b27d-437013ad1b50.png')] bg-cover bg-center opacity-20" />
@@ -20,15 +26,14 @@ export const Hero = () => {
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Professional security training and firearm handling courses by industry experts
           </p>
-          <Link to="#courses">
-            <Button
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group"
-            >
-              Explore Our Courses
-              <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          <Button
+            onClick={scrollToCourses}
+            size="lg"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group"
+          >
+            Explore Our Courses
+            <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </motion.div>
       </div>
     </section>
