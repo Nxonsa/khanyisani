@@ -14,13 +14,6 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="mb-8">
-            <img 
-              src="/lovable-uploads/01d04dfc-ae85-445e-a418-a0bf64ea5bc4.png" 
-              alt="Khanyisani Logo" 
-              className="h-24 mx-auto opacity-90"
-            />
-          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Khanyisani Firearm and Security Training Academy
           </h1>
